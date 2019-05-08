@@ -16,17 +16,17 @@
     <div class="container">
       <div id="title" class="row">
 
-        <div class="col-md-12 col-sm-12">
+        <div class="col-sm-12 col-md-12">
           <h1 class="title">Digite a senha, Padawan.</h1>
           <h4 class="sub-title">Lembre-se: Somente letras e números.</h4>
         </div>
       </div>
 
       <div class="row">
-        <div class="col-md-12 col-sm-12">
+        <div class="col-sm-12 col-md-12">
           <form onsubmit="return CheckPassword(password)">
-            <div class="form-group">
-              <label class="password-text" for="password">Senha</label><br>
+            <div class="form-horizontal">
+              <label class="control-label" for="password">Senha</label><br>
               <input id="password" type="password" placeholder="Insira a senha" name="password" title = "Precisa contar no máximo 6 caracteres entre letras e números." required >
             </div>
             <button type="submit" class="form-button">Acessar</button>
