@@ -1,0 +1,87 @@
+body{
+  background-image: url("../image/image2.jpg");
+  background-position: center center; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed; 
+  background-size: cover; 
+}
+
+.container{
+  width:100%;
+  padding-right:15px;
+  padding-left:15px;
+  margin-right:auto;
+  margin: 200px 150px;
+}
+.title{
+  font-size: 2vw;
+  color: white;
+}
+
+.sub-title{
+  font-size: 1vw;
+  color: white;
+}
+.password-form {
+  color: white;
+  position: relative;
+  margin: 0 -100px;
+  padding: 20px 20px 20px;
+  width: 310px;
+}
+
+.password {
+  width: 200px;
+  height: 15px;
+  margin-left: 20px;
+  border-radius: 15px;
+  border: none;
+  color: white;
+}
+
+.password-text {
+  color: white;
+}
+
+.form-button {
+  color: white;
+  width: 100px;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 15px;
+  border: none;
+  background-image: linear-gradient(to left, #101010, #131313);
+}
+
+#message {
+  display:none;
+  color: white;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+#message p {
+  padding: 10px 35px;
+  font-size: 18px;
+}
+
+.valid {
+  color: #00ff00;
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+  content: "✔";
+}
+
+.invalid {
+  color: #f4181b;
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+  content: "✖";
+}

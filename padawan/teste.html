@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="javascript/bundle.js"></script>
+    <script src="javascript/password_check.js"></script>
+    <link rel="stylesheet" href="stylesheet/teste.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/x-icon" href="./image/r2d23.png"/>
+    <meta charset="UTF-8"/>
+    <title>Teste do Padawan</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div id="title" class="row">
+
+        <div class="col-md-12 col-sm-12">
+          <h1 class="title">Digite a senha, Padawan.</h1>
+          <h4 class="sub-title">Lembre-se: Somente letras e números.</h4>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12 col-sm-12">
+          <form onsubmit="return CheckPassword(password)">
+            <div class="form-group">
+              <label class="password-text" for="password">Senha</label><br>
+              <input id="password" type="password" placeholder="Insira a senha" name="password" title = "Precisa contar no máximo 6 caracteres entre letras e números." required >
+            </div>
+            <button type="submit" class="form-button">Acessar</button>
+            
+            <div id="message">
+              <h5>Senha deve conter: </h5>
+              <p id="length" class="invalid">Máximo <b>6 caracteres.</b></p>
+              <p id="empty" class="invalid"><b>NÃO</b> ser nulo.</p>
+            </div>
+          </form>
+          
+          <script>
+            var myInput = document.getElementById("password");
+            var length = document.getElementById("length");
+            var empty = document.getElementById("empty");
+
+            myInput.onfocus = function(){
+              document.getElementById("message").style.display = "block";
+            }
+
+            myInput.onblur = function(){
+              document.getElementById("message").style.display = "none";
+            }
+
+            myInput.onkeyup = function(){
+              if(myInput.value.length > 6){
+                length.classList.remove("valid");
+                length.classList.add("invalid");
+              }
+              else if(myInput.value.length === 0){
+                length.classList.remove("valid");
+                length.classList.add("invalid");
+                empty.classList.remove("valid");
+                empty.classList.add("invalid");
+              }
+              else{
+                length.classList.remove("invalid");
+                length.classList.add("valid");
+                empty.classList.remove("invalid");
+                empty.classList.add("valid");
+              }
+            }
+          </script>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
